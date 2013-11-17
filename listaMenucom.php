@@ -90,7 +90,7 @@ $arrayMenu4 = array(
             'items'=>array(
                 array('label'=>'Solicitudes de compra',
                 'items'=>array(
-                    array('label'=>'Crear solicitud de compra', 'url'=>array('/solicitudCompra/borrador')),
+                    array('label'=>'Crear solicitud de compra', 'url'=>array('/solicitudCompra/nuevo')),
                     array('label'=>'Ver solicitudes de compra', 'url'=>array('/solicitudCompra/listado',)), 
                     array('label'=>'Confirmar solicitudes de compra', 'url'=>array('/solicitudCompra/confirmar',)), 
                     array('label'=>'Aprobar/rechazar solicitudes', 'url'=>array('/solicitudCompra/listadoAprobacion',)), 

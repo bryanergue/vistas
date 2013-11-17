@@ -30,7 +30,7 @@ class SolicitudCompraController extends Controller
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view','listado','addProveedor','confirmar','viewConfirmar',
                 'confimarSolicitud','listadoAprobacion','aprobar','rechazar','aprobadas','viewAprobada',
-                'asignarComite','viewComite','addComite'),
+                'asignarComite','viewComite','addComite','nuevo'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -47,10 +47,21 @@ class SolicitudCompraController extends Controller
 		);
 	}
     
+    public function actionNuevo(){
+         $model=new SolicitudCompra;
+         $proveedores = Proveedor::model()->findAll();                                                   
+         $this->render('create',array(
+            'model'=>$model,
+            'proveedores'=>$proveedores,
+            
+        ));
+    }
+    
     public function actionListado(){
          $model=new SolicitudCompra;
          $this->render('_listado',array(
             'model'=>$model,
+            
         ));
     }
 
